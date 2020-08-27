@@ -30,8 +30,7 @@ public class UserDao implements Dao<User> {
     @Override
     public void update(User user, String[] params) {
         user.setName(Objects.requireNonNull(params[0], "Name cannot be null"));
-        user.setName(Objects.requireNonNull(params[1], "Email cannot be null"));
-        users.add(user);
+        user.setEmail(Objects.requireNonNull(params[1], "Email cannot be null"));
     }
 
     @Override
